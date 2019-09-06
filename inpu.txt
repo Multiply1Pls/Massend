@@ -1,0 +1,58 @@
+import React, { Component } from 'react'
+// import { withStyles } from '@material-ui/styles';
+
+// const Styeles = {
+//     InpuChatButton:{
+//         padding:'10px 15px',
+//         backgroundColor:'#f5f5f5',
+//         borderTop:'1px solid #ddd',
+//         borderBottomRightRadius:'3px',
+//         borderBottomLeftRadius:'3px',
+//         position:'fixed',
+//         bottom:'0%',
+
+//     }
+// }
+class InputData extends Component {
+ 
+
+    state = {
+        msg: ""
+    }
+
+    onTextChange = (e) => {
+        this.setState({
+            msg: e.target.value
+        })
+    }
+
+    onClickButton = () => {
+        this.props.onClickButtonHandler(this.state.msg)
+    }
+
+     render() {
+        // const { classes } =this.props;
+         return(
+            // <div className={classes.InpuChatButton}>
+            <div>
+                <div >
+                    <input
+                        onChange = { this.onTextChange }
+                        value = {this.state.msg}
+                        // id="btn-input" 
+                        // type="text" 
+                        // className="form-control input-sm" 
+                        placeholder="Type your message here..." />
+                     <span>
+                        <button
+                            onClick={this.onClickButton}
+                            id="btn-chat">
+                            Send</button>
+                    </span>
+                </div>
+            </div>
+         )
+     }
+}
+export default InputData;
+// export default withStyles(Styeles)(InputData);
