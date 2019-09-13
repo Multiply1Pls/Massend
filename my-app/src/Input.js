@@ -8,7 +8,7 @@ import SendRoundedIcon from '@material-ui/icons/SendRounded';
 const Styeles = {
     InpuChatButton: {
         padding: '10px 15px',
-        backgroundColor: '#f5f5f5',
+        backgroundColor: '#F0F0F0',
         borderTop: '1px solid #ddd',
         borderBottomRightRadius: '3px',
         borderBottomLeftRadius: '3px',
@@ -21,12 +21,11 @@ const Styeles = {
         borderRadius: '35px',
         // position: 'absolute',
         width: '80%',
-        height:'20px',
+        height: '20px',
 
     }
 }
 class InputData extends Component {
-
 
     state = {
         msg: ""
@@ -60,12 +59,14 @@ class InputData extends Component {
                         // id="btn-input" 
                         // type="text" 
                         // className="form-control input-sm" 
-                        placeholder="พิมข้อมความ" ></input>
+                        placeholder="พิมข้อความ" ></input>
                     <span>
                         <button
                             style={{
-                                border: '0px solid #ffffff00', backgroundColor: '#ffffff00', position: 'absolute'
-                                , right: '3%%', bottom: '3px'
+                                border: '0px solid #ffffff00',
+                                backgroundColor: '#ffffff00',
+                                position: 'absolute',
+                                right: '3%%', bottom: '3px'
                             }}>
                             {/* <InsertEmoticonOutlinedIcon>
                             </InsertEmoticonOutlinedIcon> */}
@@ -73,10 +74,11 @@ class InputData extends Component {
                         {/* <EmojiPicker onEmojiClick={this.myCallback}></EmojiPicker> */}
                         <button
                             style={{
-                                border: '0px solid #ffffff00', 
-                                backgroundColor: '#ffffff00', 
+                                border: '0px solid #ffffff00',
+                                backgroundColor: '#ffffff00',
                                 position: 'absolute'
-                                , right: '12%', bottom: '13%'}}
+                                , right: '12%', bottom: '13%'
+                            }}
                             onClick={this.onClickButton}>
                             <SendRoundedIcon onClick={this.onClickButton} ></SendRoundedIcon></button>
                     </span>

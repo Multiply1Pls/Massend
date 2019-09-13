@@ -1,8 +1,8 @@
 import React from 'react'
 import { withStyles } from '@material-ui/styles';
+// import TEST from '../Img/TEST.jpg'
 
-
-const Styeles ={
+const Styeles ={ 
     OverScroll:{
         // backgroundColor:'skyblue',
         // border:'0px',
@@ -13,11 +13,12 @@ const Styeles ={
             padding: '10px 15px',
             backgroundColor: '#ffffff00',
             borderTop: '0px solid #ddd',
-            borderBottomRightRadius: '0px',
-            borderBottomLeftRadius: '0px',
+            // borderBottomRightRadius: '0px',
+            // borderBottomLeftRadius: '0px',
             position: 'fixed',
-            bottom: '5%', 
-            right:'3px'   
+            bottom: '7%', 
+            right:'3px',
+            width:'65%',  
         },
     
 
@@ -27,20 +28,31 @@ const ListData = (props) => {
 const {classes} = props
     return (
         <div className={classes.InpuChatButton}>
+            <img/>
+            {/* </img> */}
         {/* <div> */}
             {
                 props.listMsg.map( msg =>{
-                    return <p style={{
-                        backgroundColor:'skyblue',
+                    return <p 
+                        style={{
+                        backgroundColor:'#1C3657',
                         padding:'inherit',
-                        borderRadius:'40px',
-                        textOverflow:'clip',
-                        float:'right'}} 
+                        // textOverflow:'clip',
+                        float:'right',
+                        color:'white',
+                        clear:'both',
+                        borderTopLeftRadius:'18px',
+                        borderBottomLeftRadius:'18px',
+                        borderBottomRightRadius:'18px',
+                    }}
                         key = { msg.key }>{ msg.message }</p>
                     // </button>
                 }) 
             }
-        </div>        
+        {/* </div>
+             <div> */}
+
+             </div>
     )
 
 }

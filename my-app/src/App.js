@@ -3,6 +3,7 @@ import InputData from './Input'
 import ListData from './List'
 import firebase from 'firebase'
 import { Config } from './config'
+import AppII from './Appbar'
 // import Popup from './Popup/popup'
 firebase.initializeApp(Config)
 
@@ -32,12 +33,13 @@ class App extends React.Component {
 
 
   render() {
-    const listMsg = this.state.listMsg.map( msg => {
-      return <p>{msg.message}</p>
-    })
+    // const listMsg = this.state.listMsg.map( msg => {
+    //   return <h4>{msg.message}</h4>
+    // })
     return (
       <div>
         {/* <Popup></Popup> */}
+        <AppII></AppII>
         <ListData
             listMsg = {this.state.listMsg} />
         <InputData 
